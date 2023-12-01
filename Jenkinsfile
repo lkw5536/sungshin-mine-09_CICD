@@ -1,7 +1,8 @@
 node {
 	def app
 	stage('Clone repository') {
-		git 'https://github.com/linason-esc/sungshin-mine-09_CICD.git'
+		git branch:'main',
+			url:'https://github.com/linason-esc/sungshin-mine-09_CICD.git'
 	}
 	stage('Build image') {
 		app = docker.build("opensourceteam6/opensourceteam6")
