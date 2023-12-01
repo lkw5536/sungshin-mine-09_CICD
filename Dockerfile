@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 RUN apt-get update
-RUN apt-get -y install build-esstial wget curl  
+RUN apt-get install -y build-esstial wget curl  
 RUN  mkdir -p /server
 RUN wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 RUN curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
