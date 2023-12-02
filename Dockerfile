@@ -11,5 +11,5 @@ RUN ln -s /usr/share/zoneinfo/Asia/Seoul /etc/localtime
 RUN apt-get install -y nodejs npm 
 COPY . /server/
 WORKDIR /server/
-CMD npm install
-CMD npm start 
+RUN npm install
+RUN npm start 
