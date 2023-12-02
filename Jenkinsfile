@@ -9,6 +9,8 @@ node {
 	}
 	stage('Test image') {
 		app.inside {
+			sh 'apt-get install -y build-essential curl'
+			sh 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash'
 			sh 'source ~/.nvm/nvm.sh'
 			sh 'nvm install 18.15.0'
 		}
