@@ -3,7 +3,7 @@ RUN apt-get update
 RUN apt-get install -y build-essential curl
 RUN mkdir -p /server
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-RUN ["/bin/bash", "-c". "source ~/.bashrc"]
+RUN ["/bin/bash", "-c", "source ~/.bashrc"]
 RUN rm -rf /etc/localtime 
 RUN ln -s /usr/share/zoneinfo/Asia/Seoul /etc/localtime 
 RUN apt-get install -y nodejs npm 
