@@ -15,7 +15,6 @@ node {
 	stage('Push image') {
 		docker.withRegistry('https://registry.hub.docker.com', 'opensourceteam6') {
 			app.push("${env.BUILD_NUMBER}")
-			app.push("latest")
 		}
 	}
 }
