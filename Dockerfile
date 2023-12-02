@@ -11,5 +11,5 @@ RUN ln -s /usr/share/zoneinfo/Asia/Seoul /etc/localtime
 RUN apt-get install -y nodejs npm 
 COPY . /app/
 WORKDIR /app/server/
-RUN  ["/bin/bash", "-c", "npm install"]
+RUN  ["/bin/bash", "-c", "npm install -g npm@9.5.0"]
 RUN  ["/bin/bash", "-c", "npm start "]
