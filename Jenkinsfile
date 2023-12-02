@@ -9,7 +9,8 @@ node {
 	}
 	stage('Test image') {
 		app.inside {
-			sh 'echo hello'
+			sh 'source ~/.nvm/nvm.sh'
+			sh 'nvm install 18.15.0'
 		}
 	}
 	stage('Push image') {
