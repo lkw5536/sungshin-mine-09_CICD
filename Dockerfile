@@ -5,6 +5,8 @@ RUN apt-get install -y build-essential wget curl
 RUN mkdir -p /server
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 RUN source ~/.bashrc
+RUN nvm install node
+RUN apt-get install npm
 COPY . /server/
 WORKDIR /server/
 CMD nvm install 18.15.0
