@@ -4,7 +4,8 @@ RUN apt-get install -y build-essential curl
 RUN mkdir -p /server
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 RUN ["/bin/bash", "-c", "source ~/.bashrc"]
-RUN source ~/.nvm/nvm.sh && nvm install 18.15.0 && nvm use 18.15.0
+RUN ["/bin/bash", "-c", "source ~/.nvm/nvm.sh"]
+RUN nvm install 18.15.0 && nvm use 18.15.0
 RUN rm -rf /etc/localtime 
 RUN ln -s /usr/share/zoneinfo/Asia/Seoul /etc/localtime 
 RUN apt-get install -y nodejs npm 
