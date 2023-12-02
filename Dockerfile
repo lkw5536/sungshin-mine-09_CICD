@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 SHELL ["/bin/bash", "-c"]
 RUN apt-get update
-RUN apt-get install -y build-essential wget curl
+RUN apt-get install -y build-essential curl
 RUN mkdir -p /server
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 RUN source ~/.bashrc
