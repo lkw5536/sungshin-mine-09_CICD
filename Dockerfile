@@ -1,4 +1,5 @@
 FROM ubuntu:20.04
+SHELL ["/bin/bash", "-c"]
 RUN apt-get update
 RUN apt-get install -y build-essential wget curl
 RUN mkdir -p /server
