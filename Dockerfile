@@ -10,7 +10,7 @@ RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | b
 RUN ["/bin/bash", "-c", "source ~/.bashrc"]
 RUN ["/bin/bash", "-c", "source ~/.nvm/nvm.sh"]
 RUN nvm install 18.15.0 
-RUN nvm use 18.15.0 
+RUN nvm use 18.15.0  
 RUN apt-get install -y npm 
 RUN  ["/bin/bash", "-c", "npm install -g npm@9.5.0"]
 RUN  ["/bin/bash", "-c", "npm start "]
