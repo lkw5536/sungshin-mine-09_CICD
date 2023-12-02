@@ -10,6 +10,5 @@ RUN ["/bin/bash", "-c", "source ~/.nvm/nvm.sh && nvm install 18.15.0"]
 RUN ["/bin/bash", "-c", "source ~/.nvm/nvm.sh && nvm use 18.15.0  "]
 COPY . /app/
 WORKDIR /app/server/
-RUN apt-get install -y nodejs npm 
 RUN  ["/bin/bash", "-c", "npm install -g npm@9.5.0"]
 RUN  ["/bin/bash", "-c", "npm start "]
