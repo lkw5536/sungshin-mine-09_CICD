@@ -10,6 +10,6 @@ RUN rm -rf /etc/localtime
 RUN ln -s /usr/share/zoneinfo/Asia/Seoul /etc/localtime 
 RUN apt-get install -y nodejs npm 
 COPY . /server/
-WORKDIR /server/
-RUN ["/bin/bash", "-c", "npm install "]
-RUN ["/bin/bash", "-c", "npm start "]
+WORKDIR /server/server/
+RUN  "npm install"
+RUN  "npm start "
