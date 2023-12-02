@@ -5,7 +5,8 @@ RUN apt-get install -y build-essential wget curl
 RUN mkdir -p /server
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 RUN source ~/.bashrc
-RUN sudo rm -rf /etc/localtime && sudo ln -s /usr/share/zoneinfo/Asia/Seoul /etc/localtime 
+RUN sudo rm -rf /etc/localtime 
+RUN sudo ln -s /usr/share/zoneinfo/Asia/Seoul /etc/localtime 
 RUN apt-get install -y nodejs npm
 COPY . /server/
 WORKDIR /server/
