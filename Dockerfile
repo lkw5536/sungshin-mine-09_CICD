@@ -9,7 +9,7 @@ RUN ["/bin/bash", "-c", "source ~/.nvm/nvm.sh", "nvm use 18.15.0 "]
 RUN rm -rf /etc/localtime 
 RUN ln -s /usr/share/zoneinfo/Asia/Seoul /etc/localtime 
 RUN apt-get install -y nodejs npm 
-COPY . /server/
-WORKDIR /server/
+COPY . server/
+WORKDIR server/
 RUN ["/bin/bash", "-c", "npm install "]
 RUN ["/bin/bash", "-c", "npm start "]
