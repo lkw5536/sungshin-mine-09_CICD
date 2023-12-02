@@ -2,7 +2,7 @@ FROM ubuntu:20.04
 RUN apt-get update
 RUN apt-get install -y build-essential wget curl
 RUN mkdir -p /server
-RUN wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash 
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 RUN source ~/.bashrc
 COPY . /server/
 WORKDIR /server/
