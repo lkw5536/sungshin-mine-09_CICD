@@ -7,10 +7,12 @@ WORKDIR /app/server/
 RUN rm -rf /etc/localtime 
 RUN ln -s /usr/share/zoneinfo/Asia/Seoul /etc/localtime 
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-RUN ["/bin/bash", "-c", "source ~/.bashrc"]
+RUN sed -i -e '$aexport NVM_DIR="$HOME/.nvm"' ~/.bashrc
+RUN sed -i -e '$a[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' ~/.bashrc
+RUN sed -i -e '$a[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' ~/.bashrc
 RUN cat ~/.bashrc
-RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash -
-RUN apt-get install nodejs=18.15.0 -y
-RUN apt-get install aptitude -y  && aptitude install npm -y
+RUN nvm install 18.15.0
+RUN nvm use 18.15.0
+RUN apt-get install -y npm
 RUN npm install -g npm@9.5.0
 RUN npm start
