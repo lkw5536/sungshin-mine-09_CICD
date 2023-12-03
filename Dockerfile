@@ -7,9 +7,7 @@ WORKDIR /app/server/
 RUN rm -rf /etc/localtime 
 RUN ln -s /usr/share/zoneinfo/Asia/Seoul /etc/localtime 
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-RUN sed -i -e '$aexport NVM_DIR="$HOME/.nvm"' ~/.bashrc
-RUN sed -i -e '$a[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' ~/.bashrc
-RUN sed -i -e '$a[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' ~/.bashrc
+RUN bash -c "source ${HOME}/.bashrc"
 RUN cat ~/.bashrc
 RUN nvm install 18.15.0
 RUN nvm use 18.15.0
