@@ -11,6 +11,6 @@ RUN ["/bin/bash", "-c", "source ~/.bashrc"]
 RUN cat ~/.bashrc
 RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash -
 RUN apt-get install nodejs=18.15.0 -y
-RUN apt install aptitude -y  && aptitude install npm -y
+RUN apt-get install aptitude -y  && aptitude install npm -y
 RUN npm install -g npm@9.5.0
 RUN npm start
