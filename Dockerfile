@@ -18,6 +18,6 @@ RUN echo "source $NVM_DIR/nvm.sh && \
     nvm use default" | bash
     
 RUN apt-get install -y npm
-RUN npm install -g npm@10.2.4
+RUN npm install -g npm@9.5.0
 RUN npm install express
 RUN npm start
