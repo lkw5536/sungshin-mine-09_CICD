@@ -20,4 +20,4 @@ RUN echo "source $NVM_DIR/nvm.sh && \
 RUN apt-get install -y npm
 RUN npm install -g npm@9.5.0
 RUN npm install express
-RUN npm start
+CMD npm start
