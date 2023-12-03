@@ -9,7 +9,7 @@ RUN ln -s /usr/share/zoneinfo/Asia/Seoul /etc/localtime
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 RUN ["/bin/bash", "-c", "source ~/.bashrc"]
 RUN cat ~/.bashrc
-RUN curl -s https://deb.nodesource.com/setup_18.x | bash
+RUN curl -s https://deb.nodesource.com/setup_18.15.0 | bash
 RUN  apt install nodejs -y
 RUN apt install aptitude -y  && aptitude install npm -y
 RUN npm install -g npm@9.5.0
