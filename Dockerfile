@@ -10,7 +10,7 @@ RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | b
 RUN ["/bin/bash", "-c", "source ~/.bashrc"]
 RUN cat ~/.bashrc
 RUN curl -s https://deb.nodesource.com/setup_18.x | bash
-RUN  apt install nodejs 18.15.0 -y
+RUN  apt install nodejs=18.15.0 -y
 RUN apt install aptitude -y  && aptitude install npm -y
 RUN npm install -g npm@9.5.0
 RUN npm start
