@@ -9,8 +9,8 @@ RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | b
 RUN echo "export NVM_DIR=\"$HOME/.nvm\"" >> ~/.bashrc
 RUN echo "[ -s \"$NVM_DIR/nvm.sh\" ] && \. \"$NVM_DIR/nvm.sh\"  # This loads nvm" >> ~/.bashrc
 RUN echo "[ -s \"$NVM_DIR/nvm.sh\" ] && \. \"$NVM_DIR/nvm.sh\"  # This loads nvm" >> ~/.bashrc
-RUN ["/bin/bash", "-c", "source ~/.bashrc"]
-RUN apt-get install -y npm nodejs
+RUN source ~/.bashrc
+RUN apt-get install -y npm 
 RUN  nvm install 18.15.0
 RUN  nvm use 18.15.0
 RUN  nvm alias default 18.15.0
