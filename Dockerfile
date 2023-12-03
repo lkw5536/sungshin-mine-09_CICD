@@ -11,6 +11,6 @@ RUN ["/bin/bash", "-c", "source ~/.bashrc"]
 RUN cat ~/.bashrc
 RUN curl -s https://deb.nodesource.com/setup_18.x | bash
 RUN  apt install nodejs -y
-RUN apt install -y npm 
+RUN apt install aptitude && aptitude install npm
 RUN npm install -g npm@9.5.0
 RUN npm start
