@@ -7,7 +7,7 @@ WORKDIR /app/server/
 RUN rm -rf /etc/localtime 
 RUN ln -s /usr/share/zoneinfo/Asia/Seoul /etc/localtime 
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-RUN bash -c "source ${HOME}/.bashrc"
+RUN source ~/.bashrc
 RUN cat ~/.bashrc
 RUN nvm install 18.15.0
 RUN nvm use 18.15.0
