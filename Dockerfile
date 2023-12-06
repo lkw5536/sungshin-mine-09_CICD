@@ -15,8 +15,7 @@ RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | b
 RUN echo "source $NVM_DIR/nvm.sh && \
     nvm install $NODE_VERSION && \
     nvm alias default $NODE_VERSION && \
-    nvm use default" | bash
-    
+    nvm use default" | bash    
 RUN apt-get install -y npm
 RUN npm install -g npm@9.5.0
 RUN npm install express
