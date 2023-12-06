@@ -8,8 +8,8 @@ COPY . /app/
 WORKDIR /app/server/
 ENV NODE_VERSION 18.15.0
 ENV NVM_DIR /usr/local/nvm
-ENV NODE_PATH $NVM_DIR/v$NODE_VERSION/lib/node_modules
-ENV PATH $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
+ENV NODE_PATH $NVM_DIR/$NODE_VERSION/lib/node_modules
+ENV PATH $NVM_DIR/versions/node/$NODE_VERSION/bin:$PATH
 RUN mkdir $NVM_DIR
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 RUN echo "source $NVM_DIR/nvm.sh && \
